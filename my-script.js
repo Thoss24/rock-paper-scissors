@@ -12,8 +12,19 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')
-  ) {alert(`You win ${playerSelection} beats ${computerSelection}`)
+    ) {alert(`You win! ${playerSelection} beats ${computerSelection}.`)
     return "Player Win";}
+    
+    else if(
+    (playerSelection == 'rock' && computerSelection == 'paper') ||
+    (playerSelection == 'paper' && computerSelection == 'scissors') ||
+    (playerSelection == 'scissors' && computerSelection == 'rock')
+    ) {alert(`You lose, ${computerSelection} beats ${playerSelection}.`)
+    return "Computer Win";}
+
+    else (playerSelection == computerSelection)
+        alert(`It's a tie, ${playerSelection} and ${computerSelection} are equal.`)
+        return "Tie";
 }  
 
 const playerSelection = prompt("Choose either 'Rock', 'Paper' or 'Scissors'.").toLowerCase();
