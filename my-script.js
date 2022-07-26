@@ -1,4 +1,3 @@
-
 // Function to randomly return either "Rock", "Paper" or "Scissors" as the computers choice.
 function getComputerChoice() {
     const myArray = ["rock", "paper", "scissors"];
@@ -9,10 +8,11 @@ function getComputerChoice() {
 // define scores
 let playerScore = 0;
 let computerScore = 0;
+let playerSelection = prompt("Choose either 'Rock', 'Paper' or 'Scissors'.").toLowerCase();
+let computerSelection = getComputerChoice();
 
 // Function to play a round of "Rock", "Paper", "Scissors". 
 function playRound(playerSelection, computerSelection) { 
-    
   if (
     (playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
@@ -31,31 +31,25 @@ function playRound(playerSelection, computerSelection) {
         return "Lose"
     } 
 
-    else if (playerSelection == computerSelection)
-        alert(`It's a tie, ${playerSelection} and ${computerSelection} are equal.`); 
-        return "Tie";
+    else if (playerSelection == computerSelection){
+        alert(`It's a tie, ${playerSelection} and ${computerSelection} are equal.`);
+        return "Tie"
+    }
 }  
-let playerSelection = prompt("Choose either 'Rock', 'Paper' or 'Scissors'.").toLowerCase();
-let computerSelection = getComputerChoice();
 playRound(playerSelection, computerSelection);
 
-// scoreboard
-function scoreboard() {
-    playRound(playerSelection, computerSelection);
-    
-    console.log("player " + playerScore);
-    console.log("computer " + computerScore);
-}
-
-// log first loop
-console.log("player " + playerScore);
-console.log("computer " + computerScore);
-
+// Show first loop
+console.log("Player score " + playerScore);
+console.log("Computer score " + computerScore); 
+ 
 // loop
 function game() {
     for (let i = 0; i < 4; i++){
          playerSelection = prompt("Choose another option, either 'Rock', 'Paper', or 'Scissors'".toLowerCase());
-         scoreboard();
+         computerSelection = getComputerChoice();
+         console.log(playRound(playerSelection, computerSelection));
+         console.log("Player score " + playerScore);
+         console.log("Computer score " + computerScore);    
 }
 if (playerScore > computerScore){
     console.log("Player Wins!")
