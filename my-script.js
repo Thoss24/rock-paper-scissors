@@ -9,7 +9,6 @@ function getComputerChoice() {
 // define scores
 let playerScore = 0;
 let computerScore = 0;
-let tieScore = 0;
 
 // Function to play a round of "Rock", "Paper", "Scissors". 
 function playRound(playerSelection, computerSelection) { 
@@ -34,7 +33,6 @@ function playRound(playerSelection, computerSelection) {
 
     else if (playerSelection == computerSelection)
         alert(`It's a tie, ${playerSelection} and ${computerSelection} are equal.`); 
-        tieScore++;
         return "Tie";
 }  
 let playerSelection = prompt("Choose either 'Rock', 'Paper' or 'Scissors'.").toLowerCase();
@@ -47,31 +45,24 @@ function scoreboard() {
     
     console.log("player " + playerScore);
     console.log("computer " + computerScore);
-    console.log("tie " + tieScore);
 }
 
 // log first loop
 console.log("player " + playerScore);
 console.log("computer " + computerScore);
-console.log("tie " + tieScore);
+
 // loop
 function game() {
-    
     for (let i = 0; i < 4; i++){
          playerSelection = prompt("Choose another option, either 'Rock', 'Paper', or 'Scissors'".toLowerCase());
          scoreboard();
 }
-if (playerScore > computerScore && playerScore > tieScore){
+if (playerScore > computerScore){
     console.log("Player Wins!")
-} else if (computerScore > playerScore && computerScore > tieScore){
+} else if (computerScore > playerScore){
     console.log("Computer Wins.")
-} else if (playerScore === computerScore){
-    console.log("It's a tie")
-} else if (tieScore > playerScore && tieScore > computerScore){
-    console.log("It's a tie")
-} else if(tieScore === playerScore || tieScore === computerScore){
-    console.log("It's a tie")
-}
+} else if (playerScore === computerScore)
+    console.log("It's a tie");
 }
 game();
 
