@@ -6,43 +6,72 @@ function getComputerChoice() {
     return myValue;                                                  
 }
 
+// define scores
+let playerScore = 0;
+let computerScore = 0;
+let tieScore = 0;
+
 // Function to play a round of "Rock", "Paper", "Scissors". 
 function playRound(playerSelection, computerSelection) { 
+    
   if (
     (playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')
     ) { alert(`You win! ${playerSelection} beats ${computerSelection}.`);
         playerScore++;
-        return "Player Win";}
+        return "Win"
+    }
     
     else if(
     (playerSelection == 'rock' && computerSelection == 'paper') ||
     (playerSelection == 'paper' && computerSelection == 'scissors') ||
     (playerSelection == 'scissors' && computerSelection == 'rock')
     ) { alert(`You lose, ${computerSelection} beats ${playerSelection}.`);
-        computerScore--;
-        return "Computer Win";} 
+        computerScore++;
+        return "Lose"
+    } 
 
-    else (playerSelection == computerSelection)
-        alert(`It's a tie, ${playerSelection} and ${computerSelection} are equal.`)
+    else if (playerSelection == computerSelection)
+        alert(`It's a tie, ${playerSelection} and ${computerSelection} are equal.`); 
+        tieScore++;
         return "Tie";
 }  
-const playerSelection = prompt("Choose either 'Rock', 'Paper' or 'Scissors'.").toLowerCase();
-const computerSelection = getComputerChoice();
+let playerSelection = prompt("Choose either 'Rock', 'Paper' or 'Scissors'.").toLowerCase();
+let computerSelection = getComputerChoice();
 playRound(playerSelection, computerSelection);
 
-
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++){
-        if (playerScore == 5){
-            return "Winner!"
-        } else if (computerScore == 5){
-            return "Loser!"
-        }
-    }
-    console.log(playerScore)
+// scoreboard
+function scoreboard() {
+    playRound(playerSelection, computerSelection);
+    
+    console.log("player " + playerScore);
+    console.log("computer " + computerScore);
+    console.log("tie " + tieScore);
 }
+
+// log first loop
+console.log("player " + playerScore);
+console.log("computer " + computerScore);
+console.log("tie " + tieScore);
+// loop
+function game() {
+    
+    for (let i = 0; i < 4; i++){
+         playerSelection = prompt("Choose another option, either 'Rock', 'Paper', or 'Scissors'".toLowerCase());
+         scoreboard();
+}
+if (playerScore > computerScore && playerScore > tieScore){
+    console.log("Player Wins!")
+} else if (computerScore > playerScore && computerScore > tieScore){
+    console.log("Computer Wins.")
+} else if (playerScore === computerScore){
+    console.log("It's a tie")
+} else if (tieScore > playerScore && tieScore > computerScore){
+    console.log("It's a tie")
+} else if(tieScore === playerScore || tieScore === computerScore){
+    console.log("It's a tie")
+}
+}
+game();
 
