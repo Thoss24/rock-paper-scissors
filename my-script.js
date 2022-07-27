@@ -1,7 +1,7 @@
 // Function to randomly return either "Rock", "Paper" or "Scissors" as the computers choice.
 function getComputerChoice() {
     const myArray = ["rock", "paper", "scissors"];
-    const myValue = myArray[Math.floor(Math.random() * myArray.length)]; // A random number between 0 and myArray.length is generated. Math.floor generates the nearest integer value generated from Math.random.  
+    const myValue = myArray[Math.floor(Math.random() * myArray.length)];
     return myValue;                                                  
 }
 
