@@ -47,7 +47,7 @@ function game() {
     for (let i = 0; i < 4; i++){
          playerSelection = prompt("Choose another option, either 'Rock', 'Paper', or 'Scissors'".toLowerCase());
          computerSelection = getComputerChoice();
-         console.log(playRound(playerSelection, computerSelection));
+         playRound(playerSelection, computerSelection);
          console.log("Player score " + playerScore);
          console.log("Computer score " + computerScore);    
 }
