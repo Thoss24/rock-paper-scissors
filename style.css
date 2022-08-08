@@ -1,11 +1,19 @@
-.rock {
+#rock {
 
 }
 
-.paper {
+#paper {
 
 }
 
-.scissors {
-    
+#scissors {
+
+}
+
+#player-score {
+    display: flex;
+    outline: 2px solid black;
+    padding: 50px;
+    width: 150px;
+    margin-top: 20px;
 }
