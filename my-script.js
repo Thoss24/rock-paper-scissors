@@ -7,8 +7,11 @@ function getComputerChoice() {
 }
 
 //event
-let buttons = document.querySelectorAll('button');
-buttons.forEach((element) => element.addEventListener('click', playRound));
+let buttonTwo = document.querySelectorAll('button');
+buttonTwo.forEach((item) => item.addEventListener('click', function(e) {
+  const input = this.textContent;
+  
+}, ))
 
 // THink about creating the player choice and computer choice values inside the event listener i.e., input of the player in selecting the button and the randomly generated string from the computer. Its all here, it just needs to be refactored.
 
@@ -17,7 +20,7 @@ buttons.forEach((element) => element.addEventListener('click', playRound));
 // define scores
 let playerScore = 0;
 let computerScore = 0;
-let playerSelection = 
+let playerSelection = prompt("")
 let computerSelection = getComputerChoice();
 
 
