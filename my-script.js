@@ -1,79 +1,59 @@
 
-// Function to randomly return either "Rock", "Paper" or "Scissors" as the computers choice.
-function getComputerChoice() {
-    const myArray = ["rock", "paper", "scissors"];
-   const myValue = myArray[Math.floor(Math.random() * myArray.length)];
-    return myValue;                                                  
-}
-
-//event
-let buttonTwo = document.querySelectorAll('button');
-buttonTwo.forEach((item) => item.addEventListener('click', function(e) {
-  const input = this.textContent;
-  
-}, ))
-
-// THink about creating the player choice and computer choice values inside the event listener i.e., input of the player in selecting the button and the randomly generated string from the computer. Its all here, it just needs to be refactored.
-
-
-
 // define scores
 let playerScore = 0;
 let computerScore = 0;
-let playerSelection = prompt("")
-let computerSelection = getComputerChoice();
+let tieScore = 0;
+
+// onclick event for button press
+document.getElementById('rock').onclick = user;
+document.getElementById('paper').onclick = user;
+document.getElementById('scissors').onclick = user;
+
+//function to compare player selection and computer selection
+function user() {
+    let playerSelection = this.value;
+
+    let computerChoice = ["rock", "paper", "scissors"];
+    let computerSelection = computerChoice[Math.floor(Math.random() * 3)]
 
 
 // Function to play a round of "Rock", "Paper", "Scissors". 
-function playRound(playerSelection, computerSelection) { 
+function playRound(choice1, choice2) { 
   if (
-    (playerSelection == 'rock' && computerSelection == 'scissors') ||
-    (playerSelection == 'paper' && computerSelection == 'rock') ||
-    (playerSelection == 'scissors' && computerSelection == 'paper')
-    ) { alert(`You win! ${playerSelection} beats ${computerSelection}.`);
+    (choice1 == 'rock' && choice2 == 'scissors') ||
+    (choice1 == 'paper' && choice2 == 'rock') ||
+    (choice1 == 'scissors' && choice2 == 'paper')
+    ) { alert(`You win! ${choice1} beats ${choice2}.`);
         playerScore++;
-        return "Win"
     }
     
     else if(
-    (playerSelection == 'rock' && computerSelection == 'paper') ||
-    (playerSelection == 'paper' && computerSelection == 'scissors') ||
-    (playerSelection == 'scissors' && computerSelection == 'rock')
-    ) { alert(`You lose, ${computerSelection} beats ${playerSelection}.`);
+    (choice1 == 'rock' && choice2 == 'paper') ||
+    (choice1 == 'paper' && choice2 == 'scissors') ||
+    (choice1 == 'scissors' && choice2 == 'rock')
+    ) { alert(`You lose, ${choice2} beats ${choice1}.`);
         computerScore++;
-        return "Lose"
     } 
 
-    else if (playerSelection == computerSelection){
-        alert(`It's a tie, ${playerSelection} and ${computerSelection} are equal.`);
-        return "Tie"
+    else if (choice1 == choice2){
+        alert(`It's a tie, ${choice1} and ${choice2} are equal.`);
+        tieScore++;
     }
 }  
-playRound(playerSelection, computerSelection);
+console.log(playRound(playerSelection, computerSelection));
+
+console.log("Player score: " + playerScore + " " + " ||", " Computer score: " + computerScore)
+
+
+}
 
 
 
-//Show first loop
-console.log("Player score " + playerScore);
-console.log("Computer score " + computerScore); 
+
  
-// loop
-//function game() {
-//    for (let i = 0; i < 4; i++){
-//       computerSelection = getComputerChoice();
-//        playRound(playerSelection, computerSelection);
-//       console.log("Player score " + playerScore);
-//      console.log("Computer score " + computerScore);    
-//}
-//if (playerScore > computerScore){
-//   console.log("Player Wins!")
-//} else if (computerScore > playerScore){
-//   console.log("Computer Wins.")
-//} else if (playerScore === computerScore)
-//   console.log("It's a tie");
-//}
-//game();
 
+
+    
 
 
 
