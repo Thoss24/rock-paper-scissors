@@ -3,3 +3,12 @@
 Currently the game is only playable from inside the browser console. But upon loading the page the user will be prompted to choose 'Rock', 'Paper' or 'Scissors'. It is currently best out of 5 and will display either "Player wins" or "Computer wins" depending on who won the most rounds.
 
 I will revisit this game at some point to add a Graphical User Interface with buttons and text to make playable from outside of the browser console and more visually appealing.
+
+## Update.
+
+The game now has some basic HTML and CSS to make it playable from the page.
+
+The JavaScript was updated using DOM methods.
+The game can now be played by pressing buttons to choose rock paper or scissors, in addition to being able to reset the game with a rest button.
+
+I will likely return to this project at a later date to make it look much nicer.

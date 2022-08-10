@@ -72,24 +72,3 @@ document.getElementById('reset-button').onclick = clearScore;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-    
-
-
-
