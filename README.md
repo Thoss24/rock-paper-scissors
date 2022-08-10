@@ -4,11 +4,11 @@ Currently the game is only playable from inside the browser console. But upon lo
 
 I will revisit this game at some point to add a Graphical User Interface with buttons and text to make playable from outside of the browser console and more visually appealing.
 
-## Update.
+## Update
 
 The game now has some basic HTML and CSS to make it playable from the page.
 
 The JavaScript was updated using DOM methods.
-The game can now be played by pressing buttons to choose rock paper or scissors, in addition to being able to reset the game with a rest button.
+The game can now be played by pressing buttons to choose rock paper or scissors, in addition to being able to reset the game with a reset button.
 
 I will likely return to this project at a later date to make it look much nicer.
