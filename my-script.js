@@ -42,8 +42,18 @@ function playRound(choice1, choice2) {
 }  
 console.log(playRound(playerSelection, computerSelection));
 
-console.log("Player score: " + playerScore + " " + " ||", " Computer score: " + computerScore)
 
+let scoreKeep = document.getElementById('player-score');
+scoreKeep.textContent = "Player score: " + playerScore;
+
+let compScore = document.getElementById('computer-score');
+compScore.textContent = "Computer score: " + computerScore;
+
+let drawScore = document.getElementById('tie-score');
+drawScore.textContent = "Number of tie's: " + tieScore;
+}
+
+function keepScore() {
 
 }
 
