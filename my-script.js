@@ -52,17 +52,32 @@ console.log(playRound(playerSelection, computerSelection));
 
 function firstToFive(play, comp) {
    if (play === 5){
-    alert("You win! You got 5 points before the computer!")
+    alert("You win! You got 5 points before the computer!");
    } else if (comp === 5){
-    alert("You lose. The computer got 5 points before you, better luck next time.")
+    alert("You lose. The computer got 5 points before you, better luck next time.");
    }
 }
 firstToFive(playerScore, computerScore);
 
+function clearScore() {
+    scoreKeep.textContent = "";
+    playerScore = 0;
+    compScore.textContent = "";
+    computerScore = 0;
+    drawScore.textContent = "";
+    tieScore = 0;
+}
+
+document.getElementById('reset-button').onclick = clearScore;
 
 }
 
-document.getElementById('reset-button').onclick = user.reset();
+
+
+
+
+
+
 
 
 
