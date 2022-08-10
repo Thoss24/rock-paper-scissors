@@ -14,8 +14,15 @@ function user() {
     let playerSelection = this.value;
 
     let computerChoice = ["rock", "paper", "scissors"];
-    let computerSelection = computerChoice[Math.floor(Math.random() * 3)]
+    let computerSelection = computerChoice[Math.floor(Math.random() * 3)];
 
+
+    let scoreKeep = document.getElementById('player-score');
+    
+    let compScore = document.getElementById('computer-score');
+    
+    let drawScore = document.getElementById('tie-score');
+    
 
 // Function to play a round of "Rock", "Paper", "Scissors". 
 function playRound(choice1, choice2) { 
@@ -23,39 +30,43 @@ function playRound(choice1, choice2) {
     (choice1 == 'rock' && choice2 == 'scissors') ||
     (choice1 == 'paper' && choice2 == 'rock') ||
     (choice1 == 'scissors' && choice2 == 'paper')
-    ) { alert(`You win! ${choice1} beats ${choice2}.`);
-        playerScore++;
+    ) { playerScore++;
+        scoreKeep.textContent = "Player score: " + playerScore;
     }
     
     else if(
     (choice1 == 'rock' && choice2 == 'paper') ||
     (choice1 == 'paper' && choice2 == 'scissors') ||
     (choice1 == 'scissors' && choice2 == 'rock')
-    ) { alert(`You lose, ${choice2} beats ${choice1}.`);
-        computerScore++;
+    ) { computerScore++;
+        compScore.textContent = "Computer score: " + computerScore;
     } 
 
     else if (choice1 == choice2){
-        alert(`It's a tie, ${choice1} and ${choice2} are equal.`);
         tieScore++;
+        drawScore.textContent = "Number of ties: " + tieScore;
     }
 }  
 console.log(playRound(playerSelection, computerSelection));
 
 
-let scoreKeep = document.getElementById('player-score');
-scoreKeep.textContent = "Player score: " + playerScore;
+function firstToFive(play, comp) {
+   if (play === 5){
+    alert("You win! You got 5 points before the computer!")
+   } else if (comp === 5){
+    alert("You lose. The computer got 5 points before you, better luck next time.")
+   }
+}
+firstToFive(playerScore, computerScore);
 
-let compScore = document.getElementById('computer-score');
-compScore.textContent = "Computer score: " + computerScore;
 
-let drawScore = document.getElementById('tie-score');
-drawScore.textContent = "Number of tie's: " + tieScore;
 }
 
-function keepScore() {
+document.getElementById('reset-button').onclick = user.reset();
 
-}
+
+
+
 
 
 
