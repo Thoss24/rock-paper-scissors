@@ -9,6 +9,7 @@ document.getElementById('rock').onclick = user;
 document.getElementById('paper').onclick = user;
 document.getElementById('scissors').onclick = user;
 
+
 //function to compare player selection and computer selection
 function user() {
     let playerSelection = this.value;
@@ -18,12 +19,9 @@ function user() {
 
 
     let scoreKeep = document.getElementById('player-score');
-    
     let compScore = document.getElementById('computer-score');
-    
     let drawScore = document.getElementById('tie-score');
     
-
 // Function to play a round of "Rock", "Paper", "Scissors". 
 function playRound(choice1, choice2) { 
   if (
@@ -31,7 +29,7 @@ function playRound(choice1, choice2) {
     (choice1 == 'paper' && choice2 == 'rock') ||
     (choice1 == 'scissors' && choice2 == 'paper')
     ) { playerScore++;
-        scoreKeep.textContent = "Player score: " + playerScore;
+        scoreKeep.textContent = playerScore;
     }
     
     else if(
@@ -39,12 +37,12 @@ function playRound(choice1, choice2) {
     (choice1 == 'paper' && choice2 == 'scissors') ||
     (choice1 == 'scissors' && choice2 == 'rock')
     ) { computerScore++;
-        compScore.textContent = "Computer score: " + computerScore;
+        compScore.textContent = computerScore;
     } 
 
     else if (choice1 == choice2){
         tieScore++;
-        drawScore.textContent = "Number of ties: " + tieScore;
+        drawScore.textContent = tieScore;
     }
 }  
 console.log(playRound(playerSelection, computerSelection));
@@ -52,12 +50,17 @@ console.log(playRound(playerSelection, computerSelection));
 
 function firstToFive(play, comp) {
    if (play === 5){
-    alert("You win! You got 5 points before the computer!");
+    scoreKeep.textContent = playerScore;
+    clearScore();
+    alert("You win! You got 5 points before the computer");
    } else if (comp === 5){
-    alert("You lose. The computer got 5 points before you, better luck next time.");
+    compScore.textContent = computerScore;
+    clearScore();
+    alert("You lose. THe computer got 5 points before you")
    }
 }
 firstToFive(playerScore, computerScore);
+
 
 function clearScore() {
     scoreKeep.textContent = "";
