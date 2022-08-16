@@ -49,17 +49,32 @@ console.log(playRound(playerSelection, computerSelection));
 
 
 function firstToFive(play, comp) {
-   if (play === 5){
+    if (play === 5){
+    scoreKeep.textContent = playerScore;
+    clearScore();
+    alert("You win! You got 5 points before the computer");
+    } else if (comp === 5){
+    compScore.textContent = computerScore;
+    clearScore();
+    alert("You lose. The computer got 5 points before you")
+    } 
+}
+firstToFive(playerScore, computerScore);
+
+
+if (play === 5){
     scoreKeep.textContent = playerScore;
     clearScore();
     alert("You win! You got 5 points before the computer");
    } else if (comp === 5){
     compScore.textContent = computerScore;
     clearScore();
-    alert("You lose. THe computer got 5 points before you")
+    alert("You lose. The computer got 5 points before you")
    }
-}
-firstToFive(playerScore, computerScore);
+
+
+
+
 
 
 function clearScore() {
