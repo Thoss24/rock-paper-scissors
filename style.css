@@ -94,7 +94,7 @@
     height: 50px;
 }
 
-.choices {
+#player-choice {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,3 +102,13 @@
     width: 100px;
     height: 50px;
 }
+
+#computer-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 2px solid black;
+    width: 100px;
+    height: 50px;
+}
+
