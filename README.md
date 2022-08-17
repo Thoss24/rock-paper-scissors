@@ -12,3 +12,8 @@ The JavaScript was updated using DOM methods.
 The game can now be played by pressing buttons to choose rock paper or scissors, in addition to being able to reset the game with a reset button.
 
 I will likely return to this project at a later date to make it look much nicer.
+
+## Update 17/08/2022
+
+I returned to this project to improve the ui, it now has a nice and clean blue and white theme.
+I also added the functionality to display the user and computer choice on the page, in addition to making the game automatically reset once there is a winner.
