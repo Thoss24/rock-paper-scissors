@@ -10,24 +10,40 @@
     width: 150px;
     padding: 5px;
     font-size: 19px;
+    color: grey;
+    border-radius: 8px;
+    background-color: white;
+    border-style: none;
 }
 
 #rock {
     width: 100px;
     padding: 5px;
     font-size: 19px;
+    color: grey;
+    border-radius: 8px;
+    background-color: white;
+    border-style: none;
 }
 
 #paper {
     width: 100px;
     padding: 5px;
     font-size: 19px;
+    color: grey;
+    border-radius: 8px;
+    background-color: white;
+    border-style: none;
 }
 
 #scissors {
     width: 100px;
     padding: 5px;
     font-size: 19px;
+    color: grey;
+    border-radius: 8px;
+    background-color: white;
+    border-style: none;
 }
 
 #title {
@@ -57,7 +73,7 @@
 
 #div-vs-parent {
     display: flex;
-    gap: 320px;
+    gap: 110px;
     justify-content: center;
 }
 
@@ -104,6 +120,7 @@
     justify-content: center;
     width: 100px;
     height: 50px;
+    font-size: 25px;
 }
 
 #computer-choice {
@@ -113,15 +130,17 @@
     justify-content: center;
     width: 100px;
     height: 50px;
+    font-size: 25px;
 }
 
 .player-computer {
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 1px solid black;
     width: 100px;
     height: 50px;
+    font-size: 25px;
+    text-decoration: underline;
 }
 
 #choice-container {
@@ -130,10 +149,24 @@
     justify-content: center;
 }
 
-#body-container {
-    background: linear-gradient(to right, lightblue, lightgreen );
+html, body {
+    background: linear-gradient(45deg, rgb(106, 120, 209), rgb(0, 164, 189));
     background-repeat: no-repeat;
-    margin-left: 60vh;
-    margin-right: 60vh;
+    height: 100%;
+    width: 100%;
+    margin: 0, 0, 0, 0;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
 }
+
+#body-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
 

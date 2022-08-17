@@ -75,6 +75,8 @@ function clearScore() {
     computerScore = 0;
     drawScore.textContent = "";
     tieScore = 0;
+    player.textContent = "";
+    computer.textContent = "";
 }
 
 document.getElementById('reset-button').onclick = clearScore;
