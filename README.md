@@ -19,3 +19,4 @@ I returned to this project to improve the ui, it now has a nice and clean blue a
 I also added the functionality to display the user and computer choice on the page, in addition to making the game automatically reset once there is a winner.
 
 #### Link to live site
+https://thoss24.github.io/rock-paper-scissors-game/
